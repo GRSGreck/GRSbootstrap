@@ -1,0 +1,22 @@
+{
+  "name": "GRSbp",
+  "version": "1.0.0",
+  "authors": [
+    "GRS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.*",
+    "bootstrap-sass": "*",
+    "html5shiv": "*",
+    "respond": "*",
+    "fontawesome": "~4.3.0"
+  }
+}
