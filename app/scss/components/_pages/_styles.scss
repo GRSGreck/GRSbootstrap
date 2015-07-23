@@ -1,0 +1,12 @@
+@include sprites($spritesheet-sprites);
+.test {
+	padding: 10px 10px;
+	list-style: none;
+}
+.sprite {
+	display: inline-block;
+	margin-right: 20px;
+}
+.sprite:hover {
+	@include sprite($s-Twitter-Bird-48);
+}
