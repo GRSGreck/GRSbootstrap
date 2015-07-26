@@ -33,15 +33,21 @@ The `sprites` mixin generates identical output to the CSS template
 
 @include sprites($spritesheet-sprites);
 */
+.s-Digg-01-32 {
+  background-image: url(../img/sprites.png);
+  background-position: -104px -256px;
+  width: 32px;
+  height: 32px; }
+
 .s-Ebay-32 {
   background-image: url(../img/sprites.png);
-  background-position: -52px -256px;
+  background-position: -52px -204px;
   width: 32px;
   height: 32px; }
 
 .s-Facebook-32 {
   background-image: url(../img/sprites.png);
-  background-position: -52px -204px;
+  background-position: -52px -256px;
   width: 32px;
   height: 32px; }
 
@@ -65,13 +71,13 @@ The `sprites` mixin generates identical output to the CSS template
 
 .s-RSS-32 {
   background-image: url(../img/sprites.png);
-  background-position: -272px -52px;
+  background-position: 0px -204px;
   width: 32px;
   height: 32px; }
 
 .s-Twitter-Bird-32 {
   background-image: url(../img/sprites.png);
-  background-position: 0px -204px;
+  background-position: -272px 0px;
   width: 32px;
   height: 32px; }
 
@@ -95,7 +101,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .s-YouTube1-32 {
   background-image: url(../img/sprites.png);
-  background-position: -272px 0px;
+  background-position: -272px -52px;
   width: 32px;
   height: 32px; }
 
