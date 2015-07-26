@@ -1,24 +1,24 @@
 "use strict";
 
 var gulp = require("gulp"),
-		htmlMin = require("gulp-minify-html"),
-		htmlHint = require("gulp-htmlhint"),
-		sass = require("gulp-sass"),
-		autoprefixer = require("gulp-autoprefixer"),
-		csso = require("gulp-csso"),
-		plumber = require("gulp-plumber"),
-		imagemin = require("gulp-imagemin"),
-		pngquant = require("imagemin-pngquant"),
-		spritesmith = require("gulp.spritesmith"),
-		uglify = require("gulp-uglify"),
-		jsHint = require("gulp-jshint"),
-		rigger = require("gulp-rigger"),
-		size = require("gulp-size"),
-		sourcemaps = require("gulp-sourcemaps"),
-		watch = require("gulp-watch"),
-		del = require("del"),
-		browserSync = require("browser-sync"),
-		reload = browserSync.reload;
+	htmlMin = require("gulp-minify-html"),
+	htmlHint = require("gulp-htmlhint"),
+	sass = require("gulp-sass"),
+	autoprefixer = require("gulp-autoprefixer"),
+	csso = require("gulp-csso"),
+	plumber = require("gulp-plumber"),
+	imagemin = require("gulp-imagemin"),
+	pngquant = require("imagemin-pngquant"),
+	spritesmith = require("gulp.spritesmith"),
+	uglify = require("gulp-uglify"),
+	jsHint = require("gulp-jshint"),
+	rigger = require("gulp-rigger"),
+	size = require("gulp-size"),
+	sourcemaps = require("gulp-sourcemaps"),
+	watch = require("gulp-watch"),
+	del = require("del"),
+	browserSync = require("browser-sync"),
+	reload = browserSync.reload;
 
 // ----------------------------------------------------------------------------------------------
 // Settings
@@ -265,21 +265,21 @@ gulp.task('img', function(){
 // ----------------------------------------------------------------------------------------------
 
 gulp.task('sprites', function(){
-		var spriteData = gulp.src(path.app.sprites)
-		.pipe(spritesmith({
-			imgName: 'sprites.png',
-			cssName: '_sprites.scss',
-			cssFormat: 'scss',
-			algorithm: 'binary-tree',
-			padding: 20,
-			imgPath: path.dist.sprites,
-			cssTemplate: path.app.cssTemplate,
-			cssVarMap: function(sprite){
-				sprite.name = 's-' + sprite.name
-			}
-		}));
-		spriteData.img.pipe(gulp.dest(path.app.img.sprites));
-		spriteData.css.pipe(gulp.dest(path.app.scss.sprites));
+	var spriteData = gulp.src(path.app.sprites)
+	.pipe(spritesmith({
+		imgName: 'sprites.png',
+		cssName: '_sprites.scss',
+		cssFormat: 'scss',
+		algorithm: 'binary-tree',
+		padding: 20,
+		imgPath: path.dist.sprites,
+		cssTemplate: path.app.cssTemplate,
+		cssVarMap: function(sprite){
+			sprite.name = 's-' + sprite.name
+		}
+	}));
+	spriteData.img.pipe(gulp.dest(path.app.img.sprites));
+	spriteData.css.pipe(gulp.dest(path.app.scss.sprites));
 });
 
 // ----------------------------------------------------------------------------------------------
