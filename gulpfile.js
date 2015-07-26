@@ -296,7 +296,7 @@ gulp.task('fonts', function(){
 	.pipe(size({title: 'Fonts_size_bootstrap'}))
 	.pipe(gulp.dest(path.dist.fonts + 'bootstrap/'))
 
-		// Fonts with fontawesome
+	// Fonts with fontawesome
 	gulp.src(path.bower.fontawesome)
 	.pipe(size({title: 'Fonts_size_fontawesome'}))
 	.pipe(gulp.dest(path.dist.fonts))
