@@ -1,22 +1,23 @@
 "use strict";
 
 var gulp = require("gulp"),
-		htmlMin = require("gulp-minify-html"),
-		htmlHint = require("gulp-htmlhint"),
-		sass = require("gulp-sass"),
-		autoprefixer = require("gulp-autoprefixer"),
-		csso = require("gulp-csso"),
-		plumber = require("gulp-plumber"),
-		imagemin = require("gulp-imagemin"),
-		pngquant = require("imagemin-pngquant"),
-		uglify = require("gulp-uglify"),
-		jsHint = require("gulp-jshint"),
-		rigger = require("gulp-rigger"),
-		size = require("gulp-size"),
-		sourcemaps = require("gulp-sourcemaps"),
-		del = require("del"),
-		browserSync = require("browser-sync"),
-		reload = browserSync.reload;
+	htmlMin = require("gulp-minify-html"),
+	htmlHint = require("gulp-htmlhint"),
+	sass = require("gulp-sass"),
+	autoprefixer = require("gulp-autoprefixer"),
+	csso = require("gulp-csso"),
+	plumber = require("gulp-plumber"),
+	imagemin = require("gulp-imagemin"),
+	pngquant = require("imagemin-pngquant"),
+	uglify = require("gulp-uglify"),
+	jsHint = require("gulp-jshint"),
+	rigger = require("gulp-rigger"),
+	size = require("gulp-size"),
+	sourcemaps = require("gulp-sourcemaps"),
+	watch = require("gulp-watch"),
+	del = require("del"),
+	browserSync = require("browser-sync"),
+	reload = browserSync.reload;
 
 // ----------------------------------------------------------------------------------------------
 // Settings
@@ -289,20 +290,34 @@ gulp.task('dist', [
 // ----------------------------------------------------------------------------------------------
 
 gulp.task('watch', function(){
-	gulp.watch(path.watch.html, ['html']);
-	gulp.watch([path.watch.scss.main, '!' + path.watch.scss.vendor], ['css:main']);
-	gulp.watch(path.watch.scss.vendor, ['css:vendor']);
-	gulp.watch([path.watch.js.main, '!' + path.watch.js.vendor, '!' + path.watch.js.ltie9], ['js:main']);
-	gulp.watch([path.watch.js.vendor, path.watch.js.ltie9], ['js:vendor']);
-	gulp.watch(path.watch.img, ['img']);
-	gulp.watch(path.watch.fonts, ['fonts']);
+	watch([path.watch.html], function(event, cb){
+		gulp.start('html');
+	});
+	watch([path.watch.scss.main, '!' + path.watch.scss.vendor], function(event, cb){
+		gulp.start('css:main');
+	});
+	watch([path.watch.scss.vendor], function(event, cb){
+		gulp.start('css:vendor');
+	});
+	watch([path.watch.js.main, '!' + path.watch.js.vendor, '!' + path.watch.js.ltie9], function(event, cb){
+		gulp.start('js:main');
+	});
+	watch([path.watch.js.vendor, path.watch.js.ltie9], function(event, cb){
+		gulp.start('js:vendor');
+	});
+	watch([path.watch.img], function(event, cb){
+		gulp.start('img');
+	});
+	watch([path.watch.fonts], function(event, cb){
+		gulp.start('fonts');
+	});
 });
 
 // ----------------------------------------------------------------------------------------------
 // Task: Web Server
 // ----------------------------------------------------------------------------------------------
 
-gulp.task('webserver', function(){
+gulp.task('webserver', ['img'], function(){
 	browserSync(config);
 });
 
