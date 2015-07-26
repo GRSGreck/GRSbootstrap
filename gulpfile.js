@@ -322,17 +322,6 @@ gulp.task('dist', [
 // Task: Watch
 // ----------------------------------------------------------------------------------------------
 
-// gulp.task('watch', function(){
-// 	gulp.watch(path.watch.html, ['html']);
-// 	gulp.watch([path.watch.scss.main, '!' + path.watch.scss.vendor], ['css:main']);
-// 	gulp.watch(path.watch.scss.vendor, ['css:vendor']);
-// 	gulp.watch([path.watch.js.main, '!' + path.watch.js.vendor, '!' + path.watch.js.ltie9], ['js:main']);
-// 	gulp.watch([path.watch.js.vendor, path.watch.js.ltie9], ['js:vendor']);
-// 	gulp.watch(path.watch.img, ['img']);
-// 	gulp.watch(path.watch.sprites, ['sprites']);
-// 	gulp.watch(path.watch.fonts, ['fonts']);
-// });
-
 gulp.task('watch', function(){
 	watch([path.watch.html], function(event, cb){
 		gulp.start('html');
