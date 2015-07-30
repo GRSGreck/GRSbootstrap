@@ -17,6 +17,6 @@
     "bootstrap-sass": "*",
     "html5shiv": "*",
     "respond": "*",
-    "fontawesome": "~4.3.0"
+    "fontawesome": "*"
   }
 }
