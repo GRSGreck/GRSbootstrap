@@ -35,7 +35,7 @@ The `sprites` mixin generates identical output to the CSS template
 */
 .s-Digg-01-32 {
   background-image: url(../img/sprites.png);
-  background-position: -104px -256px;
+  background-position: 0px -204px;
   width: 32px;
   height: 32px; }
 
@@ -47,127 +47,199 @@ The `sprites` mixin generates identical output to the CSS template
 
 .s-Facebook-32 {
   background-image: url(../img/sprites.png);
-  background-position: -52px -256px;
+  background-position: -104px -204px;
   width: 32px;
   height: 32px; }
 
 .s-Google-32 {
   background-image: url(../img/sprites.png);
-  background-position: 0px -256px;
+  background-position: -156px -204px;
   width: 32px;
   height: 32px; }
 
 .s-LinkedIn-32 {
   background-image: url(../img/sprites.png);
-  background-position: -272px -156px;
+  background-position: -208px -204px;
   width: 32px;
   height: 32px; }
 
 .s-Pinterest-32 {
   background-image: url(../img/sprites.png);
-  background-position: -272px -104px;
+  background-position: -272px 0px;
   width: 32px;
   height: 32px; }
 
 .s-RSS-32 {
   background-image: url(../img/sprites.png);
-  background-position: 0px -204px;
+  background-position: -156px -308px;
   width: 32px;
   height: 32px; }
 
 .s-Twitter-Bird-32 {
   background-image: url(../img/sprites.png);
-  background-position: -272px 0px;
+  background-position: -272px -104px;
   width: 32px;
   height: 32px; }
 
 .s-Vimeo-32 {
   background-image: url(../img/sprites.png);
-  background-position: -208px -204px;
+  background-position: -272px -156px;
   width: 32px;
   height: 32px; }
 
 .s-WordPress-32 {
   background-image: url(../img/sprites.png);
-  background-position: -156px -204px;
+  background-position: 0px -256px;
   width: 32px;
   height: 32px; }
 
 .s-Yahoo-01-32 {
   background-image: url(../img/sprites.png);
-  background-position: -104px -204px;
+  background-position: -52px -256px;
   width: 32px;
   height: 32px; }
 
 .s-YouTube1-32 {
   background-image: url(../img/sprites.png);
-  background-position: -272px -52px;
+  background-position: -104px -256px;
+  width: 32px;
+  height: 32px; }
+
+.s-Digg-01-32 {
+  background-image: url(../img/sprites.png);
+  background-position: 0px -204px;
+  width: 32px;
+  height: 32px; }
+
+.s-Ebay-32 {
+  background-image: url(../img/sprites.png);
+  background-position: -52px -204px;
+  width: 32px;
+  height: 32px; }
+
+.s-Facebook-32 {
+  background-image: url(../img/sprites.png);
+  background-position: -104px -204px;
+  width: 32px;
+  height: 32px; }
+
+.s-Google-32 {
+  background-image: url(../img/sprites.png);
+  background-position: -156px -204px;
+  width: 32px;
+  height: 32px; }
+
+.s-LinkedIn-32 {
+  background-image: url(../img/sprites.png);
+  background-position: -208px -204px;
+  width: 32px;
+  height: 32px; }
+
+.s-Pinterest-32 {
+  background-image: url(../img/sprites.png);
+  background-position: -272px 0px;
+  width: 32px;
+  height: 32px; }
+
+.s-RSS-32 {
+  background-image: url(../img/sprites.png);
+  background-position: -156px -308px;
+  width: 32px;
+  height: 32px; }
+
+.s-Twitter-Bird-32 {
+  background-image: url(../img/sprites.png);
+  background-position: -272px -104px;
+  width: 32px;
+  height: 32px; }
+
+.s-Vimeo-32 {
+  background-image: url(../img/sprites.png);
+  background-position: -272px -156px;
+  width: 32px;
+  height: 32px; }
+
+.s-WordPress-32 {
+  background-image: url(../img/sprites.png);
+  background-position: 0px -256px;
+  width: 32px;
+  height: 32px; }
+
+.s-Yahoo-01-32 {
+  background-image: url(../img/sprites.png);
+  background-position: -52px -256px;
+  width: 32px;
+  height: 32px; }
+
+.s-YouTube1-32 {
+  background-image: url(../img/sprites.png);
+  background-position: -104px -256px;
   width: 32px;
   height: 32px; }
 
 .s-Digg-01-48 {
   background-image: url(../img/sprites.png);
-  background-position: 0px 0px;
+  background-position: 0px -136px;
   width: 48px;
   height: 48px; }
 
 .s-Ebay-48 {
   background-image: url(../img/sprites.png);
-  background-position: -204px -136px;
+  background-position: 0px -68px;
   width: 48px;
   height: 48px; }
 
 .s-Facebook-48 {
   background-image: url(../img/sprites.png);
-  background-position: -204px -68px;
+  background-position: -68px -68px;
   width: 48px;
   height: 48px; }
 
 .s-Google-48 {
   background-image: url(../img/sprites.png);
-  background-position: -204px 0px;
+  background-position: -136px 0px;
   width: 48px;
   height: 48px; }
 
 .s-LinkedIn-48 {
   background-image: url(../img/sprites.png);
-  background-position: -136px -136px;
+  background-position: -136px -68px;
   width: 48px;
   height: 48px; }
 
 .s-Pinterest-48 {
   background-image: url(../img/sprites.png);
-  background-position: -68px -136px;
+  background-position: 0px 0px;
   width: 48px;
   height: 48px; }
 
 .s-RSS-48 {
   background-image: url(../img/sprites.png);
-  background-position: 0px -136px;
+  background-position: -68px -136px;
   width: 48px;
   height: 48px; }
 
 .s-Twitter-Bird-48 {
   background-image: url(../img/sprites.png);
-  background-position: -136px -68px;
+  background-position: -136px -136px;
   width: 48px;
   height: 48px; }
 
 .s-Vimeo-48 {
   background-image: url(../img/sprites.png);
-  background-position: -136px 0px;
+  background-position: -204px 0px;
   width: 48px;
   height: 48px; }
 
 .s-WordPress-48 {
   background-image: url(../img/sprites.png);
-  background-position: -68px -68px;
+  background-position: -204px -68px;
   width: 48px;
   height: 48px; }
 
 .s-Yahoo-01-48 {
   background-image: url(../img/sprites.png);
-  background-position: 0px -68px;
+  background-position: -204px -136px;
   width: 48px;
   height: 48px; }
 
@@ -187,6 +259,6 @@ The `sprites` mixin generates identical output to the CSS template
 
 .sprite:hover {
   background-image: url(../img/sprites.png);
-  background-position: -136px -68px;
+  background-position: -136px -136px;
   width: 48px;
   height: 48px; }
