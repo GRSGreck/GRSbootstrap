@@ -297,11 +297,11 @@ gulp.task('sprites', function(){
 gulp.task('convfonts', function(){
 	var fontmin = new Fontmin()
   .src(path.app.fonts)
-  .use(Fontmin.ttf2eot())									// Convert .ttf to .eot
-  .use(Fontmin.ttf2woff({deflate: true}))	// Convert .ttf to .woff
-  .use(Fontmin.ttf2svg())									// Convert .ttf to .svg
+  .use(Fontmin.ttf2eot())										// Convert .ttf to .eot
+  .use(Fontmin.ttf2woff({deflate: true}))		// Convert .ttf to .woff
+  .use(Fontmin.ttf2svg())										// Convert .ttf to .svg
   .use(Fontmin.css({
-      fontPath: '../fonts/'								// location of font file
+      fontPath: '../fonts/'									// location of font file
   }))
   .dest(path.tmp.fonts.fontsDest);
 
