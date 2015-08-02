@@ -1,6 +1,29 @@
 @font-face {
-  font-family: ALSMalina;
-  src: url("../fonts/ALSMalina.ttf"); }
+  font-family: "OswaldLight";
+  src: url("../fonts/OswaldLight.eot");
+  /* IE9 */
+  src: url("../fonts/OswaldLight.eot?#iefix") format("embedded-opentype"), url("../fonts/OswaldLight.woff") format("woff"), url("../fonts/OswaldLight.ttf") format("truetype"), url("../fonts/OswaldLight.svg#OswaldLight") format("svg");
+  /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "OswaldRegular";
+  src: url("../fonts/OswaldRegular.eot");
+  /* IE9 */
+  src: url("../fonts/OswaldRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OswaldRegular.woff") format("woff"), url("../fonts/OswaldRegular.ttf") format("truetype"), url("../fonts/OswaldRegular.svg#OswaldRegular") format("svg");
+  /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Ubuntu-L";
+  src: url("../fonts/Ubuntu-L.eot");
+  /* IE9 */
+  src: url("../fonts/Ubuntu-L.eot?#iefix") format("embedded-opentype"), url("../fonts/Ubuntu-L.woff") format("woff"), url("../fonts/Ubuntu-L.ttf") format("truetype"), url("../fonts/Ubuntu-L.svg#Ubuntu-L") format("svg");
+  /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal; }
 
 /* Colors */
 /*
@@ -33,232 +56,83 @@ The `sprites` mixin generates identical output to the CSS template
 
 @include sprites($spritesheet-sprites);
 */
-.s-Digg-01-32 {
+.s-Flickr {
   background-image: url(../img/sprites.png);
-  background-position: 0px -204px;
-  width: 32px;
-  height: 32px; }
+  background-position: 0px -31px;
+  width: 16px;
+  height: 16px; }
 
-.s-Ebay-32 {
+.s-instagram {
   background-image: url(../img/sprites.png);
-  background-position: -52px -204px;
-  width: 32px;
-  height: 32px; }
+  background-position: -16px -31px;
+  width: 16px;
+  height: 16px; }
 
-.s-Facebook-32 {
+.s-rss {
   background-image: url(../img/sprites.png);
-  background-position: -104px -204px;
-  width: 32px;
-  height: 32px; }
+  background-position: -32px -31px;
+  width: 16px;
+  height: 16px; }
 
-.s-Google-32 {
+.s-vimeo {
   background-image: url(../img/sprites.png);
-  background-position: -156px -204px;
-  width: 32px;
-  height: 32px; }
+  background-position: -48px -31px;
+  width: 16px;
+  height: 16px; }
 
-.s-LinkedIn-32 {
+.s-youTube {
   background-image: url(../img/sprites.png);
-  background-position: -208px -204px;
-  width: 32px;
-  height: 32px; }
+  background-position: -64px -31px;
+  width: 16px;
+  height: 16px; }
 
-.s-Pinterest-32 {
+.s-Twitter {
   background-image: url(../img/sprites.png);
-  background-position: -272px 0px;
-  width: 32px;
-  height: 32px; }
+  background-position: -60px 0px;
+  width: 30px;
+  height: 31px; }
 
-.s-RSS-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -156px -308px;
-  width: 32px;
-  height: 32px; }
-
-.s-Twitter-Bird-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -272px -104px;
-  width: 32px;
-  height: 32px; }
-
-.s-Vimeo-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -272px -156px;
-  width: 32px;
-  height: 32px; }
-
-.s-WordPress-32 {
-  background-image: url(../img/sprites.png);
-  background-position: 0px -256px;
-  width: 32px;
-  height: 32px; }
-
-.s-Yahoo-01-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -52px -256px;
-  width: 32px;
-  height: 32px; }
-
-.s-YouTube1-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -104px -256px;
-  width: 32px;
-  height: 32px; }
-
-.s-Digg-01-32 {
-  background-image: url(../img/sprites.png);
-  background-position: 0px -204px;
-  width: 32px;
-  height: 32px; }
-
-.s-Ebay-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -52px -204px;
-  width: 32px;
-  height: 32px; }
-
-.s-Facebook-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -104px -204px;
-  width: 32px;
-  height: 32px; }
-
-.s-Google-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -156px -204px;
-  width: 32px;
-  height: 32px; }
-
-.s-LinkedIn-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -208px -204px;
-  width: 32px;
-  height: 32px; }
-
-.s-Pinterest-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -272px 0px;
-  width: 32px;
-  height: 32px; }
-
-.s-RSS-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -156px -308px;
-  width: 32px;
-  height: 32px; }
-
-.s-Twitter-Bird-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -272px -104px;
-  width: 32px;
-  height: 32px; }
-
-.s-Vimeo-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -272px -156px;
-  width: 32px;
-  height: 32px; }
-
-.s-WordPress-32 {
-  background-image: url(../img/sprites.png);
-  background-position: 0px -256px;
-  width: 32px;
-  height: 32px; }
-
-.s-Yahoo-01-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -52px -256px;
-  width: 32px;
-  height: 32px; }
-
-.s-YouTube1-32 {
-  background-image: url(../img/sprites.png);
-  background-position: -104px -256px;
-  width: 32px;
-  height: 32px; }
-
-.s-Digg-01-48 {
-  background-image: url(../img/sprites.png);
-  background-position: 0px -136px;
-  width: 48px;
-  height: 48px; }
-
-.s-Ebay-48 {
-  background-image: url(../img/sprites.png);
-  background-position: 0px -68px;
-  width: 48px;
-  height: 48px; }
-
-.s-Facebook-48 {
-  background-image: url(../img/sprites.png);
-  background-position: -68px -68px;
-  width: 48px;
-  height: 48px; }
-
-.s-Google-48 {
-  background-image: url(../img/sprites.png);
-  background-position: -136px 0px;
-  width: 48px;
-  height: 48px; }
-
-.s-LinkedIn-48 {
-  background-image: url(../img/sprites.png);
-  background-position: -136px -68px;
-  width: 48px;
-  height: 48px; }
-
-.s-Pinterest-48 {
+.s-faceBook {
   background-image: url(../img/sprites.png);
   background-position: 0px 0px;
-  width: 48px;
-  height: 48px; }
+  width: 30px;
+  height: 31px; }
 
-.s-RSS-48 {
+.s-googlePlus {
   background-image: url(../img/sprites.png);
-  background-position: -68px -136px;
-  width: 48px;
-  height: 48px; }
+  background-position: -30px 0px;
+  width: 30px;
+  height: 31px; }
 
-.s-Twitter-Bird-48 {
-  background-image: url(../img/sprites.png);
-  background-position: -136px -136px;
-  width: 48px;
-  height: 48px; }
+.p_1 {
+  background-color: #CFF2F4;
+  font: 30px "OswaldRegular", Tahoma, sans-serif;
+  text-align: justify; }
 
-.s-Vimeo-48 {
-  background-image: url(../img/sprites.png);
-  background-position: -204px 0px;
-  width: 48px;
-  height: 48px; }
+.p_2 {
+  background-color: #A26AFF;
+  font: 30px "OswaldLight", Tahoma, sans-serif;
+  text-align: justify;
+  color: #fff; }
 
-.s-WordPress-48 {
-  background-image: url(../img/sprites.png);
-  background-position: -204px -68px;
-  width: 48px;
-  height: 48px; }
+.p_3 {
+  background-color: #FF992C;
+  font: 30px "Ubuntu-L", Tahoma, sans-serif; }
 
-.s-Yahoo-01-48 {
-  background-image: url(../img/sprites.png);
-  background-position: -204px -136px;
-  width: 48px;
-  height: 48px; }
-
-.s-YouTube1-48 {
-  background-image: url(../img/sprites.png);
-  background-position: -68px 0px;
-  width: 48px;
-  height: 48px; }
-
-.test {
-  padding: 10px 10px;
-  list-style: none; }
+.p_1, .p_2, .p_3 {
+  padding: 20px 50px;
+  margin: 0; }
 
 .sprite {
   display: inline-block;
   margin-right: 20px; }
 
+.test {
+  padding: 10px 10px;
+  list-style: none; }
+
 .sprite:hover {
   background-image: url(../img/sprites.png);
-  background-position: -136px -136px;
-  width: 48px;
-  height: 48px; }
+  background-position: 0px 0px;
+  width: 30px;
+  height: 31px; }

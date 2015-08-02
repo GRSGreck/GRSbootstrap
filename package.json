@@ -7,8 +7,10 @@
   "devDependencies": {
     "browser-sync": "*",
     "del": "*",
+    "fontmin": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
     "gulp-csso": "*",
     "gulp-htmlhint": "*",
     "gulp-imagemin": "*",

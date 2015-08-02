@@ -14,6 +14,8 @@ var gulp = require("gulp"),
 	jsHint = require("gulp-jshint"),
 	rigger = require("gulp-rigger"),
 	size = require("gulp-size"),
+	Fontmin = require("fontmin"),
+	concat = require("gulp-concat"),
 	sourcemaps = require("gulp-sourcemaps"),
 	watch = require("gulp-watch"),
 	del = require("del"),
@@ -36,14 +38,20 @@ var path = {
 	tmp: {
 		html: '.tmp/',
 		css: '.tmp/css',
-		js: '.tmp/js'
+		js: '.tmp/js',
+		fonts: {
+			fontsAdd: '.tmp/fonts/**/*.{eot,svg,ttf,woff}',
+			fontsDest: '.tmp/fonts',
+			fontFace: '.tmp/fonts/**/*.css'
+		}
 	},
 	app: {
 		html: 'app/*.html',
 		scss: {
 			vendor: 'app/scss/vendor.scss',
 			main: 'app/scss/main.scss',
-			sprites: 'app/scss/components/_components/'
+			sprites: 'app/scss/components/_components/',
+			fonts: 'app/scss/components/_configs/'
 		},
 		js: {
 			vendor: 'app/js/vendor.js',
@@ -96,7 +104,7 @@ var config = {
 	host: 'localhost',
 	port: 7777,
 	logPrefix: 'GRS*_^',
-	// browser: ['google chrome', 'firefox', 'opera', 'safari', 'iexplore'],
+	browser: ['google chrome', 'firefox', 'opera', 'safari', 'iexplore'],
 	online: false,
 	notify: false
 };
@@ -271,7 +279,7 @@ gulp.task('sprites', function(){
 		cssName: '_sprites.scss',
 		cssFormat: 'scss',
 		algorithm: 'binary-tree',
-		padding: 20,
+		padding: 0,
 		imgPath: path.dist.sprites,
 		cssTemplate: path.app.cssTemplate,
 		cssVarMap: function(sprite){
@@ -283,11 +291,42 @@ gulp.task('sprites', function(){
 });
 
 // ----------------------------------------------------------------------------------------------
+// Task: Convert fonts
+// ----------------------------------------------------------------------------------------------
+
+gulp.task('convfonts', function(){
+	var fontmin = new Fontmin()
+  .src(path.app.fonts)
+  .use(Fontmin.ttf2eot())									// Convert .ttf to .eot
+  .use(Fontmin.ttf2woff({deflate: true}))	// Convert .ttf to .woff
+  .use(Fontmin.ttf2svg())									// Convert .ttf to .svg
+  .use(Fontmin.css({
+      fontPath: '../fonts/'								// location of font file
+  }))
+  .dest(path.tmp.fonts.fontsDest);
+
+  return fontmin.run(function (err, files) {
+	  if (err) {throw err;}
+	  console.log(files[0]);
+	});
+});
+
+// ----------------------------------------------------------------------------------------------
+// Task: Concat fontsface.css
+// ----------------------------------------------------------------------------------------------
+
+gulp.task('concat', ['convfonts'], function(){
+	return gulp.src(path.tmp.fonts.fontFace)
+	.pipe(concat('_fonts.scss'))
+	.pipe(gulp.dest(path.app.scss.fonts));
+});
+
+// ----------------------------------------------------------------------------------------------
 // Task: Fonts
 // ----------------------------------------------------------------------------------------------
 
-gulp.task('fonts', function(){
-	gulp.src(path.app.fonts)
+gulp.task('fonts', ['concat'], function(){
+	gulp.src(path.tmp.fonts.fontsAdd)
 	.pipe(size({title: 'Fonts_size_project'}))
 	.pipe(gulp.dest(path.dist.fonts));
 

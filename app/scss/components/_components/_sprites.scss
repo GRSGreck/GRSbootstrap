@@ -11,44 +11,16 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
-$s-digg-01-32: (156px, 256px, -156px, -256px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Digg-01-32', );
-$s-ebay-32: (272px, 52px, -272px, -52px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Ebay-32', );
-$s-facebook-32: (208px, 256px, -208px, -256px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Facebook-32', );
-$s-google-32: (260px, 256px, -260px, -256px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Google-32', );
-$s-linked-in-32: (324px, 0px, -324px, 0px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-LinkedIn-32', );
-$s-pinterest-32: (324px, 52px, -324px, -52px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Pinterest-32', );
-$s-r-s-s-32: (324px, 104px, -324px, -104px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-RSS-32', );
-$s-twitter-bird-32: (324px, 156px, -324px, -156px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Twitter-Bird-32', );
-$s-vimeo-32: (324px, 208px, -324px, -208px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Vimeo-32', );
-$s-word-press-32: (0px, 308px, 0px, -308px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-WordPress-32', );
-$s-yahoo-01-32: (52px, 308px, -52px, -308px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Yahoo-01-32', );
-$s-you-tube1-32: (104px, 308px, -104px, -308px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-YouTube1-32', );
-$s-digg-01-32: (0px, 204px, 0px, -204px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Digg-01-32', );
-$s-ebay-32: (52px, 204px, -52px, -204px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Ebay-32', );
-$s-facebook-32: (104px, 204px, -104px, -204px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Facebook-32', );
-$s-google-32: (156px, 204px, -156px, -204px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Google-32', );
-$s-linked-in-32: (208px, 204px, -208px, -204px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-LinkedIn-32', );
-$s-pinterest-32: (272px, 0px, -272px, 0px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Pinterest-32', );
-$s-r-s-s-32: (156px, 308px, -156px, -308px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-RSS-32', );
-$s-twitter-bird-32: (272px, 104px, -272px, -104px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Twitter-Bird-32', );
-$s-vimeo-32: (272px, 156px, -272px, -156px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Vimeo-32', );
-$s-word-press-32: (0px, 256px, 0px, -256px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-WordPress-32', );
-$s-yahoo-01-32: (52px, 256px, -52px, -256px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-Yahoo-01-32', );
-$s-you-tube1-32: (104px, 256px, -104px, -256px, 32px, 32px, 356px, 340px, '../img/sprites.png', 's-YouTube1-32', );
-$s-digg-01-48: (0px, 136px, 0px, -136px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-Digg-01-48', );
-$s-ebay-48: (0px, 68px, 0px, -68px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-Ebay-48', );
-$s-facebook-48: (68px, 68px, -68px, -68px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-Facebook-48', );
-$s-google-48: (136px, 0px, -136px, 0px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-Google-48', );
-$s-linked-in-48: (136px, 68px, -136px, -68px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-LinkedIn-48', );
-$s-pinterest-48: (0px, 0px, 0px, 0px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-Pinterest-48', );
-$s-r-s-s-48: (68px, 136px, -68px, -136px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-RSS-48', );
-$s-twitter-bird-48: (136px, 136px, -136px, -136px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-Twitter-Bird-48', );
-$s-vimeo-48: (204px, 0px, -204px, 0px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-Vimeo-48', );
-$s-word-press-48: (204px, 68px, -204px, -68px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-WordPress-48', );
-$s-yahoo-01-48: (204px, 136px, -204px, -136px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-Yahoo-01-48', );
-$s-you-tube1-48: (68px, 0px, -68px, 0px, 48px, 48px, 356px, 340px, '../img/sprites.png', 's-YouTube1-48', );
-$spritesheet-sprites: ($s-digg-01-32, $s-ebay-32, $s-facebook-32, $s-google-32, $s-linked-in-32, $s-pinterest-32, $s-r-s-s-32, $s-twitter-bird-32, $s-vimeo-32, $s-word-press-32, $s-yahoo-01-32, $s-you-tube1-32, $s-digg-01-32, $s-ebay-32, $s-facebook-32, $s-google-32, $s-linked-in-32, $s-pinterest-32, $s-r-s-s-32, $s-twitter-bird-32, $s-vimeo-32, $s-word-press-32, $s-yahoo-01-32, $s-you-tube1-32, $s-digg-01-48, $s-ebay-48, $s-facebook-48, $s-google-48, $s-linked-in-48, $s-pinterest-48, $s-r-s-s-48, $s-twitter-bird-48, $s-vimeo-48, $s-word-press-48, $s-yahoo-01-48, $s-you-tube1-48, );
-$spritesheet: (356px, 340px, '../img/sprites.png', $spritesheet-sprites, );
+$s-flickr: (0px, 31px, 0px, -31px, 16px, 16px, 90px, 47px, '../img/sprites.png', 's-Flickr', );
+$s-instagram: (16px, 31px, -16px, -31px, 16px, 16px, 90px, 47px, '../img/sprites.png', 's-instagram', );
+$s-rss: (32px, 31px, -32px, -31px, 16px, 16px, 90px, 47px, '../img/sprites.png', 's-rss', );
+$s-vimeo: (48px, 31px, -48px, -31px, 16px, 16px, 90px, 47px, '../img/sprites.png', 's-vimeo', );
+$s-you-tube: (64px, 31px, -64px, -31px, 16px, 16px, 90px, 47px, '../img/sprites.png', 's-youTube', );
+$s-twitter: (60px, 0px, -60px, 0px, 30px, 31px, 90px, 47px, '../img/sprites.png', 's-Twitter', );
+$s-face-book: (0px, 0px, 0px, 0px, 30px, 31px, 90px, 47px, '../img/sprites.png', 's-faceBook', );
+$s-google-plus: (30px, 0px, -30px, 0px, 30px, 31px, 90px, 47px, '../img/sprites.png', 's-googlePlus', );
+$spritesheet-sprites: ($s-flickr, $s-instagram, $s-rss, $s-vimeo, $s-you-tube, $s-twitter, $s-face-book, $s-google-plus, );
+$spritesheet: (90px, 47px, '../img/sprites.png', $spritesheet-sprites, );
 
 /*
 The provided mixins are intended to be used with the array-like variables

@@ -1,4 +1,38 @@
 @font-face {
-	font-family: ALSMalina;
-	src: url('../fonts/ALSMalina.ttf');
+    font-family: "OswaldLight";
+    src: url("../fonts/OswaldLight.eot"); /* IE9 */
+    src: url("../fonts/OswaldLight.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/OswaldLight.woff") format("woff"), /* chrome, firefox */
+    url("../fonts/OswaldLight.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../fonts/OswaldLight.svg#OswaldLight") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
 }
+
+
+
+@font-face {
+    font-family: "OswaldRegular";
+    src: url("../fonts/OswaldRegular.eot"); /* IE9 */
+    src: url("../fonts/OswaldRegular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/OswaldRegular.woff") format("woff"), /* chrome, firefox */
+    url("../fonts/OswaldRegular.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../fonts/OswaldRegular.svg#OswaldRegular") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+@font-face {
+    font-family: "Ubuntu-L";
+    src: url("../fonts/Ubuntu-L.eot"); /* IE9 */
+    src: url("../fonts/Ubuntu-L.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/Ubuntu-L.woff") format("woff"), /* chrome, firefox */
+    url("../fonts/Ubuntu-L.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../fonts/Ubuntu-L.svg#Ubuntu-L") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

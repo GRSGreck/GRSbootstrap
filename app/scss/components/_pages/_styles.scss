@@ -1,12 +1,32 @@
 @include sprites($spritesheet-sprites);
-.test {
-	padding: 10px 10px;
-	list-style: none;
+.p_1 {
+	background-color: #CFF2F4;
+	font: 30px "OswaldRegular", Tahoma, sans-serif;
+	text-align: justify;
 }
+.p_2 {
+	background-color: #A26AFF;
+	font: 30px "OswaldLight", Tahoma, sans-serif;
+	text-align: justify;
+	color: #fff;
+}
+.p_3 {
+	background-color: #FF992C;
+	font: 30px "Ubuntu-L", Tahoma, sans-serif;
+}
+.p_1, .p_2, .p_3 {
+	padding: 20px 50px;
+	margin: 0;
+}
+
 .sprite {
 	display: inline-block;
 	margin-right: 20px;
 }
+.test {
+	padding: 10px 10px;
+	list-style: none;
+}
 .sprite:hover {
-	@include sprite($s-twitter-bird-48);
+	@include sprite($s-face-book);
 }
