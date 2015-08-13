@@ -16,15 +16,6 @@
   font-style: normal;
   font-weight: normal; }
 
-@font-face {
-  font-family: "Ubuntu-L";
-  src: url("../fonts/Ubuntu-L.eot");
-  /* IE9 */
-  src: url("../fonts/Ubuntu-L.eot?#iefix") format("embedded-opentype"), url("../fonts/Ubuntu-L.woff") format("woff"), url("../fonts/Ubuntu-L.ttf") format("truetype"), url("../fonts/Ubuntu-L.svg#Ubuntu-L") format("svg");
-  /* iOS 4.1- */
-  font-style: normal;
-  font-weight: normal; }
-
 /* Colors */
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
