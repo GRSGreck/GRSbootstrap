@@ -14,7 +14,6 @@ var gulp = require("gulp"),
 	jsHint = require("gulp-jshint"),
 	rigger = require("gulp-rigger"),
 	size = require("gulp-size"),
-	// Fontmin = require("fontmin"),
 	fontmin = require("gulp-fontmin"),
 	concat = require("gulp-concat"),
 	sourcemaps = require("gulp-sourcemaps"),
@@ -306,23 +305,6 @@ gulp.task('convfonts', function(){
 		}))
 		.pipe(gulp.dest(path.tmp.fonts.fontsDest));
 });
-
-// gulp.task('convfonts', function(){
-// 	var fontmin = new Fontmin()
-//   .src(path.app.fonts)
-//   .use(Fontmin.ttf2eot())										// Convert .ttf to .eot
-//   .use(Fontmin.ttf2woff({deflate: true}))		// Convert .ttf to .woff
-//   .use(Fontmin.ttf2svg())										// Convert .ttf to .svg
-//   .use(Fontmin.css({
-//       fontPath: '../fonts/'									// location of font file
-//   }))
-//   .dest(path.tmp.fonts.fontsDest);
-
-//   return fontmin.run(function (err, files) {
-// 	  if (err) {throw err;}
-// 	  console.log(files[0]);
-// 	});
-// });
 
 // ----------------------------------------------------------------------------------------------
 // Task: Concat fontsface.css

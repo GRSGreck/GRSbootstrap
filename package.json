@@ -7,7 +7,6 @@
   "devDependencies": {
     "browser-sync": "*",
     "del": "*",
-    "fontmin": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-concat": "*",
