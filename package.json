@@ -12,6 +12,7 @@
     "gulp-autoprefixer": "*",
     "gulp-concat": "*",
     "gulp-csso": "*",
+    "gulp-fontmin": "*",
     "gulp-htmlhint": "*",
     "gulp-imagemin": "*",
     "gulp-jshint": "*",

@@ -14,7 +14,8 @@ var gulp = require("gulp"),
 	jsHint = require("gulp-jshint"),
 	rigger = require("gulp-rigger"),
 	size = require("gulp-size"),
-	Fontmin = require("fontmin"),
+	// Fontmin = require("fontmin"),
+	fontmin = require("gulp-fontmin"),
 	concat = require("gulp-concat"),
 	sourcemaps = require("gulp-sourcemaps"),
 	watch = require("gulp-watch"),
@@ -58,10 +59,7 @@ var path = {
 			ltie9: 'app/js/ltIE9.js',
 			main: 'app/js/main.js'
 		},
-		img: {
-			imgAdd: 'app/img/**/*.*',
-			sprites: 'app/img/'
-		},
+		img: 'app/img/**/*.*',
 		sprites: 'app/sprites/**/*.*',
 		cssTemplate: 'app/sass.template.mustache',
 		fonts: 'app/fonts/**/*.*'
@@ -87,8 +85,7 @@ var path = {
 	},
 	clean: {
 		dist: 'dist',
-		tmp: '.tmp',
-		sprites: 'app/img/sprites.png'
+		tmp: '.tmp'
 	}
 };
 
@@ -104,7 +101,7 @@ var config = {
 	host: 'localhost',
 	port: 7777,
 	logPrefix: 'GRS*_^',
-	browser: ['google chrome', 'firefox', 'opera', 'safari', 'iexplore'],
+	// browser: ['google chrome', 'firefox', 'opera', 'safari', 'iexplore'],
 	online: false,
 	notify: false
 };
@@ -149,7 +146,7 @@ gulp.task('html', function(){
 		"attr-value-not-empty": true,
 		"attr-no-duplication": true,
 		"tag-pair": true,
-		"tag-self-close": true,
+		// "tag-self-close": true,
 		"spec-char-escape": true,
 		"id-unique": true,
 		"src-not-empty": true,
@@ -256,7 +253,7 @@ gulp.task('js:vendor', function(){
 // ----------------------------------------------------------------------------------------------
 
 gulp.task('img', function(){
-	return gulp.src(path.app.img.imgAdd)
+	return gulp.src(path.app.img)
 	.pipe(imagemin({
 		progressive: true,
 		svgoPlugins: [{removeViewBox: false}],
@@ -286,7 +283,15 @@ gulp.task('sprites', function(){
 			sprite.name = 's-' + sprite.name
 		}
 	}));
-	spriteData.img.pipe(gulp.dest(path.app.img.sprites));
+	spriteData.img
+	.pipe(imagemin({
+		progressive: true,
+		svgoPlugins: [{removeViewBox: false}],
+		use: [pngquant()],
+		interlaced: true
+	}))
+	.pipe(size({title: 'Sprites_Size'}))
+	.pipe(gulp.dest(path.dist.img));
 	spriteData.css.pipe(gulp.dest(path.app.scss.sprites));
 });
 
@@ -295,21 +300,30 @@ gulp.task('sprites', function(){
 // ----------------------------------------------------------------------------------------------
 
 gulp.task('convfonts', function(){
-	var fontmin = new Fontmin()
-  .src(path.app.fonts)
-  .use(Fontmin.ttf2eot())										// Convert .ttf to .eot
-  .use(Fontmin.ttf2woff({deflate: true}))		// Convert .ttf to .woff
-  .use(Fontmin.ttf2svg())										// Convert .ttf to .svg
-  .use(Fontmin.css({
-      fontPath: '../fonts/'									// location of font file
-  }))
-  .dest(path.tmp.fonts.fontsDest);
-
-  return fontmin.run(function (err, files) {
-	  if (err) {throw err;}
-	  console.log(files[0]);
-	});
+	return gulp.src(path.app.fonts)
+		.pipe(fontmin({
+			fontPath: '../fonts/'
+		}))
+		.pipe(gulp.dest(path.tmp.fonts.fontsDest));
 });
+
+// gulp.task('convfonts', function(){
+// 	var fontmin = new Fontmin()
+//   .src(path.app.fonts)
+//   .use(Fontmin.ttf2eot())										// Convert .ttf to .eot
+//   .use(Fontmin.ttf2woff({deflate: true}))		// Convert .ttf to .woff
+//   .use(Fontmin.ttf2svg())										// Convert .ttf to .svg
+//   .use(Fontmin.css({
+//       fontPath: '../fonts/'									// location of font file
+//   }))
+//   .dest(path.tmp.fonts.fontsDest);
+
+//   return fontmin.run(function (err, files) {
+// 	  if (err) {throw err;}
+// 	  console.log(files[0]);
+// 	});
+// });
+
 
 // ----------------------------------------------------------------------------------------------
 // Task: Concat fontsface.css
@@ -392,7 +406,7 @@ gulp.task('watch', function(){
 // Task: Web Server
 // ----------------------------------------------------------------------------------------------
 
-gulp.task('webserver', ['img'], function(){
+gulp.task('webserver', ['sprites','img'], function(){
 	browserSync(config);
 });
 
@@ -401,7 +415,7 @@ gulp.task('webserver', ['img'], function(){
 // ----------------------------------------------------------------------------------------------
 
 gulp.task('clean', function(cb){
-	del([path.clean.dist, path.clean.tmp, path.clean.sprites], cb);
+	del([path.clean.dist, path.clean.tmp], cb);
 });
 
 // ----------------------------------------------------------------------------------------------

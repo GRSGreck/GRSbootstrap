@@ -1,18 +1,18 @@
 @include sprites($spritesheet-sprites);
 .p_1 {
 	background-color: #CFF2F4;
-	font: 30px "OswaldRegular", Tahoma, sans-serif;
+	font: 30px "PT Sans", Tahoma, sans-serif;
 	text-align: justify;
 }
 .p_2 {
 	background-color: #A26AFF;
-	font: 30px "OswaldLight", Tahoma, sans-serif;
+	font: italic 30px "Oswald", Tahoma, sans-serif;
 	text-align: justify;
 	color: #fff;
 }
 .p_3 {
 	background-color: #FF992C;
-	font: 30px "Ubuntu-L", Tahoma, sans-serif;
+	font: 30px "Ubuntu", Tahoma, sans-serif;
 }
 .p_1, .p_2, .p_3 {
 	padding: 20px 50px;
