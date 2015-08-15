@@ -145,7 +145,7 @@ gulp.task('html', function(){
 		"attr-value-not-empty": true,
 		"attr-no-duplication": true,
 		"tag-pair": true,
-		// "tag-self-close": true,
+		"tag-self-close": false,
 		"spec-char-escape": true,
 		"id-unique": true,
 		"src-not-empty": true,
@@ -275,7 +275,7 @@ gulp.task('sprites', function(){
 		cssName: '_sprites.scss',
 		cssFormat: 'scss',
 		algorithm: 'binary-tree',
-		padding: 0,
+		padding: 5,
 		imgPath: path.dist.sprites,
 		cssTemplate: path.app.cssTemplate,
 		cssVarMap: function(sprite){
@@ -291,7 +291,8 @@ gulp.task('sprites', function(){
 	}))
 	.pipe(size({title: 'Sprites_Size'}))
 	.pipe(gulp.dest(path.dist.img));
-	spriteData.css.pipe(gulp.dest(path.app.scss.sprites));
+	spriteData.css.pipe(gulp.dest(path.app.scss.sprites))
+	.pipe(reload({stream: true}));
 });
 
 // ----------------------------------------------------------------------------------------------
@@ -321,18 +322,19 @@ gulp.task('concat', ['convfonts'], function(){
 // ----------------------------------------------------------------------------------------------
 
 gulp.task('fonts', ['concat'], function(){
-	gulp.src(path.tmp.fonts.fontsAdd)
-	.pipe(size({title: 'Fonts_size_project'}))
-	.pipe(gulp.dest(path.dist.fonts));
-
 	// Fonts with bootstrap
 	gulp.src(path.bower.fontsbootstrap)
 	.pipe(size({title: 'Fonts_size_bootstrap'}))
-	.pipe(gulp.dest(path.dist.fonts + 'bootstrap/'))
+	.pipe(gulp.dest(path.dist.fonts + 'bootstrap/'));
 
 	// Fonts with fontawesome
 	gulp.src(path.bower.fontawesome)
 	.pipe(size({title: 'Fonts_size_fontawesome'}))
+	.pipe(gulp.dest(path.dist.fonts));
+
+	// Fonts with the current project
+	gulp.src(path.tmp.fonts.fontsAdd)
+	.pipe(size({title: 'Fonts_size_project'}))
 	.pipe(gulp.dest(path.dist.fonts))
 	.pipe(reload({stream: true}));
 });

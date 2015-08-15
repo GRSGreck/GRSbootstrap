@@ -11,16 +11,16 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
-$s-flickr: (0px, 31px, 0px, -31px, 16px, 16px, 90px, 47px, '../img/sprites.png', 's-Flickr', );
-$s-instagram: (16px, 31px, -16px, -31px, 16px, 16px, 90px, 47px, '../img/sprites.png', 's-instagram', );
-$s-rss: (32px, 31px, -32px, -31px, 16px, 16px, 90px, 47px, '../img/sprites.png', 's-rss', );
-$s-vimeo: (48px, 31px, -48px, -31px, 16px, 16px, 90px, 47px, '../img/sprites.png', 's-vimeo', );
-$s-you-tube: (64px, 31px, -64px, -31px, 16px, 16px, 90px, 47px, '../img/sprites.png', 's-youTube', );
-$s-twitter: (60px, 0px, -60px, 0px, 30px, 31px, 90px, 47px, '../img/sprites.png', 's-Twitter', );
-$s-face-book: (0px, 0px, 0px, 0px, 30px, 31px, 90px, 47px, '../img/sprites.png', 's-faceBook', );
-$s-google-plus: (30px, 0px, -30px, 0px, 30px, 31px, 90px, 47px, '../img/sprites.png', 's-googlePlus', );
+$s-flickr: (0px, 36px, 0px, -36px, 16px, 16px, 100px, 52px, '../img/sprites.png', 's-Flickr', );
+$s-instagram: (21px, 36px, -21px, -36px, 16px, 16px, 100px, 52px, '../img/sprites.png', 's-instagram', );
+$s-rss: (42px, 36px, -42px, -36px, 16px, 16px, 100px, 52px, '../img/sprites.png', 's-rss', );
+$s-vimeo: (63px, 36px, -63px, -36px, 16px, 16px, 100px, 52px, '../img/sprites.png', 's-vimeo', );
+$s-you-tube: (84px, 36px, -84px, -36px, 16px, 16px, 100px, 52px, '../img/sprites.png', 's-youTube', );
+$s-twitter: (70px, 0px, -70px, 0px, 30px, 31px, 100px, 52px, '../img/sprites.png', 's-Twitter', );
+$s-face-book: (0px, 0px, 0px, 0px, 30px, 31px, 100px, 52px, '../img/sprites.png', 's-faceBook', );
+$s-google-plus: (35px, 0px, -35px, 0px, 30px, 31px, 100px, 52px, '../img/sprites.png', 's-googlePlus', );
 $spritesheet-sprites: ($s-flickr, $s-instagram, $s-rss, $s-vimeo, $s-you-tube, $s-twitter, $s-face-book, $s-google-plus, );
-$spritesheet: (90px, 47px, '../img/sprites.png', $spritesheet-sprites, );
+$spritesheet: (100px, 52px, '../img/sprites.png', $spritesheet-sprites, );
 
 /*
 The provided mixins are intended to be used with the array-like variables

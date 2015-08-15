@@ -49,37 +49,37 @@ The `sprites` mixin generates identical output to the CSS template
 */
 .s-Flickr {
   background-image: url(../img/sprites.png);
-  background-position: 0px -31px;
+  background-position: 0px -36px;
   width: 16px;
   height: 16px; }
 
 .s-instagram {
   background-image: url(../img/sprites.png);
-  background-position: -16px -31px;
+  background-position: -21px -36px;
   width: 16px;
   height: 16px; }
 
 .s-rss {
   background-image: url(../img/sprites.png);
-  background-position: -32px -31px;
+  background-position: -42px -36px;
   width: 16px;
   height: 16px; }
 
 .s-vimeo {
   background-image: url(../img/sprites.png);
-  background-position: -48px -31px;
+  background-position: -63px -36px;
   width: 16px;
   height: 16px; }
 
 .s-youTube {
   background-image: url(../img/sprites.png);
-  background-position: -64px -31px;
+  background-position: -84px -36px;
   width: 16px;
   height: 16px; }
 
 .s-Twitter {
   background-image: url(../img/sprites.png);
-  background-position: -60px 0px;
+  background-position: -70px 0px;
   width: 30px;
   height: 31px; }
 
@@ -91,7 +91,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .s-googlePlus {
   background-image: url(../img/sprites.png);
-  background-position: -30px 0px;
+  background-position: -35px 0px;
   width: 30px;
   height: 31px; }
 
