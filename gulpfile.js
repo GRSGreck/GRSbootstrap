@@ -131,7 +131,7 @@ gulp.task('html', function(){
 		"attr-value-not-empty": true,
 		"attr-no-duplication": true,
 		"tag-pair": true,
-		"tag-self-close": true,
+		"tag-self-close": false,
 		"spec-char-escape": true,
 		"id-unique": true,
 		"src-not-empty": true,
